@@ -3,7 +3,7 @@ import Moon from "@/app/icons/moon.svg";
 import Card from "./components/Card";
 
 export default async function HomePage() {
-  const res = await fetch(`${process.env.API_BASE_URL}/api/putzplan`, {
+  const res = await fetch(`http://localhost:3000/api/putzplan`, {
   cache: 'no-store',
   });
   const data = await res.json();
