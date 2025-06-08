@@ -10,6 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-alex: #4297ED;
+  --color-leon: #3CCD65;
+  --color-elja: #C242ED;
 }
 
 @media (prefers-color-scheme: dark) {
