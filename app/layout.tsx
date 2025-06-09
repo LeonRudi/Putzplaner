@@ -1,6 +1,7 @@
 // app/layout.tsx
 import './globals.css';
 import type { ReactNode } from 'react';
+import { ThemeProvider } from "./components/theme-provider";
 
 export const metadata = {
   title: 'Putzplaner',
@@ -9,9 +10,16 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de">
-      <body className="bg-gradient-to-b from-blue-100 to-amber-100 min-h-screen p-4">
-        {children}
+    <html lang="de" suppressHydrationWarning>
+      <body className='py-4'>
+         <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+        </ThemeProvider>
       </body>
     </html>
   );

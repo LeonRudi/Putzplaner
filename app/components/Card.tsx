@@ -20,10 +20,10 @@ interface Task {
   export default function Card({ title, user, tasks }: Props) {
      const { bgClass, cardBgClass, textClass } = getUserColors(user);
     return (
-      <div className="flex flex-col bg-zinc-900 rounded-2xl p-4">
+      <div className="flex flex-col bg-white shadow-md dark:bg-zinc-900 rounded-2xl p-4">
         <div className="flex justify-between items-center mb-4">
           <div className="text-lg font-bold tracking-widest">{title}</div>
-          <div className="flex gap-2 items-center bg-white/5 px-3 py-1.5 rounded-full">
+          <div className="flex gap-2 items-center bg-foreground/5 px-3 py-1.5 rounded-full">
           
             <div className={`${bgClass} size-1.5 rounded-full`}/>
             <div className={`${textClass} font-bold text-xs`}>{user}</div>
@@ -53,7 +53,7 @@ function TaskItem({task, cardBgClass, textClass}:
       </div>
       <div className="flex flex-col gap-1 justify-center">
         <div className="font-semibold tracking-wide">{task.title}</div>
-        <div className="text-white/60 text-xs tracking-wide">{task.desc}</div>
+        <div className="text-foreground/60 text-xs tracking-wide">{task.desc}</div>
       </div>
     </div>
   );

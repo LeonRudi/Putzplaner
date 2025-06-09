@@ -1,6 +1,7 @@
 import Logo from "@/app/icons/Logo.svg";
 import Moon from "@/app/icons/moon.svg";
 import Card from "./components/Card";
+import { DarkModeToggle } from './components/DarkModeToggle';
 
 export default async function HomePage() {
   const res = await fetch(`http://localhost:3000/api/putzplan`, {
@@ -10,21 +11,19 @@ export default async function HomePage() {
   return (
     <div className="max-w-sm mx-auto">
       <header className="text-center">
-        <div className="flex justify-between bg-zinc-900 px-4 py-2 rounded-2xl">
+        <div className="flex justify-between bg-white shadow-md dark:bg-zinc-900 px-4 py-2 rounded-2xl">
           <div className="flex items-center gap-2">
-            <Logo/>
+            <Logo className="transition-all hover:scale-110"/>
             <h1 className="text-lg font-semibold tracking-wider">Putzplaner</h1>
           </div>
-          <button className="p-2 rounded-2xl bg-foreground/5">
-            <Moon/>
-          </button>
+          <DarkModeToggle />
         </div>
       </header>
-      <section className="text-center my-4">
-        <h2 className="text-2xl font-medium tracking-widest">Wochenplan</h2>
+      <section className="text-center my-8">
+        <h2 className="text-2xl font-bold dark:font-medium tracking-widest">Wochenplan</h2>
         <p className="tracking-wide">Kalenderwoche {data.kw}</p>
       </section>
-      <section className="flex flex-col gap-2">
+      <section className="flex flex-col gap-4">
       <Card
         title="Oben"
         user={data.plan[0]}

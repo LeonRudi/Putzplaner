@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
-import { getISOWeek, differenceInCalendarISOWeeks } from 'date-fns';
+import { getISOWeek, differenceInCalendarISOWeeks, subDays } from 'date-fns';
 
 const personen: string[] = ['Leon', 'Alex', 'Elja'];
 const REFERENCE_EPOCH_DATE = new Date(2024, 0, 1);
 
 function getVerantwortliche(currentDate: Date) {
-  const continuousWeekIndex = differenceInCalendarISOWeeks(currentDate, REFERENCE_EPOCH_DATE);
+  const adjusted = subDays(currentDate, 4);
+  const continuousWeekIndex = differenceInCalendarISOWeeks(adjusted, REFERENCE_EPOCH_DATE);
   const offset = continuousWeekIndex % personen.length;
 
   return [
