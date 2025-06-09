@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" suppressHydrationWarning>
-      <body className='py-4'>
+      <body className='p-4'>
          <ThemeProvider
             attribute="class"
             defaultTheme="system"
