@@ -1,5 +1,4 @@
 import Logo from "@/app/icons/Logo.svg";
-import Moon from "@/app/icons/moon.svg";
 import Card from "./components/Card";
 import { DarkModeToggle } from './components/DarkModeToggle';
 
