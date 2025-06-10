@@ -12,7 +12,7 @@ export default async function HomePage() {
       <header className="text-center">
         <div className="flex justify-between bg-white shadow-md dark:bg-zinc-900 px-4 py-2 rounded-2xl">
           <div className="flex items-center gap-2">
-            <Logo className="transition-all hover:scale-110"/>
+            <Logo className="size-8 transition-all hover:scale-110"/>
             <h1 className="text-lg font-semibold tracking-wider">Putzplaner</h1>
           </div>
           <DarkModeToggle />
