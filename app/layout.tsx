@@ -6,6 +6,10 @@ import { ThemeProvider } from "./components/theme-provider";
 export const metadata = {
   title: 'Putzplaner',
   description: 'Dein smarter Wochenputz-Plan',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
