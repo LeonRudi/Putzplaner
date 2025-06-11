@@ -8,16 +8,24 @@ Dieses Projekt ist mein erstes mit Next.js und entstand aus einem echten Problem
 
 # Preview
 
-<div style="display: flex; gap: 20px; align-items: center;">
-  <figure style="text-align: center;">
-    <img src="media/Light.png" alt="Light Theme" style="width: 300px; border-radius: 10px;">
-    <figcaption style="margin-top: 8px; font-weight: bold;">Light Mode</figcaption>
-  </figure>
-  <figure style="text-align: center;">
-    <img src="media/Dark.png" alt="Dark Theme" style="width: 300px; border-radius: 10px;">
-    <figcaption style="margin-top: 8px; font-weight: bold;">Dark Mode</figcaption>
-  </figure>
-</div>
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="text-align: center;">Light Theme</th>
+      <th style="text-align: center;">Dark Theme</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center; padding: 10px;">
+        <img src="media/Light.png" alt="Light Theme" style="width: 90%; max-width: 300px; border-radius: 15px;">
+      </td>
+      <td style="text-align: center; padding: 10px;">
+        <img src="media/Dark.png" alt="Dark Theme" style="width: 90%; max-width: 300px; border-radius: 15px;">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## Features
