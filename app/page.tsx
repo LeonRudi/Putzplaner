@@ -1,7 +1,7 @@
-import Logo from "@/app/icons/Logo.svg";
-import Card from "./components/Card";
-import { DarkModeToggle } from './components/DarkModeToggle';
-import { GET } from '@/app/api/putzplan/route';
+import Logo from "@/icons/Logo.svg";
+import Card from "@/components/Card";
+import { DarkModeToggle } from '@/components/DarkModeToggle';
+import { GET } from '@/api/putzplan/route';
 
 export default async function HomePage() {
   const res = await GET();

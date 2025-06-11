@@ -1,12 +1,7 @@
-import VacuumIcon from '../icons/vacuum.svg';
-import BathIcon from '../icons/bath.svg';
-import ToiletIcon from '../icons/toilet.svg';
-import WashingMachineIcon from '../icons/washingmachine.svg';
-import StairsIcon from '../icons/stairs.svg';
-import BroomIcon from '../icons/broom.svg';
+import Icon, { IconName } from '@/components/Icon';
 
 interface Task {
-    icon: string;
+    icon: IconName;
     title: string;
     desc: string;
   }
@@ -44,12 +39,10 @@ function TaskItem({task, cardBgClass, textClass}:
     cardBgClass: string;
     textClass: string;
   }) {
-  const Icon = iconMap[task.icon];
-  if(!Icon) console.warn(`Icon '${task.icon}' could not be found.`)
   return (
     <div className="flex gap-2.5">
       <div className={`${cardBgClass} size-15 rounded-xl flex flex-none items-center justify-center`}>
-        {Icon ? <Icon className={`${textClass}`} width={24} height={24} /> : null}
+        <Icon name={task.icon as IconName} className={`${textClass}`} width={24} height={24} />
       </div>
       <div className="flex flex-col gap-1 justify-center">
         <div className="font-semibold tracking-wide">{task.title}</div>
@@ -60,12 +53,7 @@ function TaskItem({task, cardBgClass, textClass}:
 }
 
 const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
-  vacuum: VacuumIcon,
-  bath: BathIcon,
-  toilet: ToiletIcon,
-  washingmachine: WashingMachineIcon,
-  stairs: StairsIcon,
-  broom: BroomIcon
+  
 };
 
 function getUserColors(userName: string) {
