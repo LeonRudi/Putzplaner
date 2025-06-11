@@ -6,7 +6,7 @@ Für jede Kalenderwoche zeigt die App, welche Person welche Aufgabe in welchem B
 
 Dieses Projekt ist mein erstes mit Next.js und entstand aus einem echten Problem: In meiner Familie haben wir die Haushaltsaufgaben bisher auf Zetteln notiert, was oft unübersichtlich und fehleranfällig war. Mit dem Putzplaner habe ich eine digitale Lösung geschaffen, die die Aufgaben klar verteilt und den Überblick erleichtert.
 
-# Preview
+## Preview
 
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
   <thead>
