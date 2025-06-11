@@ -15,13 +15,13 @@ Dieses Projekt ist mein erstes mit Next.js und entstand aus einem echten Problem
       <th style="text-align: center;">Dark Theme</th>
     </tr>
   </thead>
-  <tbody>
+ <tbody>
     <tr>
-      <td style="text-align: center; padding: 10px;">
-        <img src="media/Light.png" alt="Light Theme" style="width: 90%; max-width: 300px; border-radius: 15px;">
+      <td style="padding: 10px;">
+        <img src="media/Light.png" alt="Light Theme" style="display: block; margin: 0 auto; width: 90%; max-width: 300px; border-radius: 15px;">
       </td>
-      <td style="text-align: center; padding: 10px;">
-        <img src="media/Dark.png" alt="Dark Theme" style="width: 90%; max-width: 300px; border-radius: 15px;">
+      <td style="padding: 10px;">
+        <img src="media/Dark.png" alt="Dark Theme" style="display: block; margin: 0 auto; width: 90%; max-width: 300px; border-radius: 15px;">
       </td>
     </tr>
   </tbody>
