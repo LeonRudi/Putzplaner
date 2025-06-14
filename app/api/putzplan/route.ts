@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getISOWeek, differenceInCalendarISOWeeks, subDays } from 'date-fns';
+import { getISOWeek, differenceInCalendarISOWeeks, subDays, format } from 'date-fns';
+import { de } from 'date-fns/locale';
 
 const personen: string[] = ['Leon', 'Alex', 'Elja'];
 const REFERENCE_EPOCH_DATE = new Date(2024, 0, 1);
@@ -16,8 +17,14 @@ function getVerantwortliche(currentDate: Date) {
 }
 
 export async function GET() {
+  const currentDate = new Date();
+  const formatted = format(currentDate, "d. MMMM yyyy, HH:mm 'Uhr.'", { locale: de });
+
+  console.info('[API] GET /api/putzplan aufgerufen am', formatted);
   const today = new Date();
   const kw = getISOWeek(today); 
   const plan = getVerantwortliche(today);
+  console.debug('[API] Ergebnis - KW:', kw);
+  console.debug('[API] Ergebnis -', plan);
   return NextResponse.json({ kw, plan });
 }

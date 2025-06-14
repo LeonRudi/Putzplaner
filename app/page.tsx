@@ -3,6 +3,8 @@ import Card from "@/components/Card";
 import { DarkModeToggle } from '@/components/DarkModeToggle';
 import { GET } from '@/api/putzplan/route';
 
+export const dynamic = 'force-dynamic';
+
 export default async function HomePage() {
   const res = await GET();
   const data = await res.json();
